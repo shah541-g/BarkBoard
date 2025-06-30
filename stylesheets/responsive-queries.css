@@ -1,0 +1,59 @@
+@media (min-width:550px){
+    .header {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    }
+    .breeds-cards{
+        justify-content: center;
+    }
+    .card{
+        max-width: 40%;
+    }
+    .search{
+        width: 35vw;
+    }
+
+}
+
+
+@media (min-width:970px){
+.card{
+    max-width: 30%;
+}
+}
+@media (min-width: 1050px) {
+  .flex {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap; /* Ensure it stays in one row */
+    align-items: flex-start;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--sidebar-bg-color);
+    border-radius: 2rem;
+    overflow-y: auto;
+  }
+
+  .sidebarToggle {
+    display: none;
+  }
+
+  .main {
+    width: 70%;
+  }
+
+  .breeds-cards {
+    justify-content: flex-start;
+  }
+}
+

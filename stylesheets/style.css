@@ -1,0 +1,200 @@
+
+/* Import Links */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
+
+/* Overall Settings */
+
+:root{
+    --body-color:#1F1D2B;
+    --nav-color: #242730;
+    --search-color:#808191;
+    --card-bg-color:#242f3f;
+    --sidebar-bg-color:#212028;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--body-color);
+  color: #FFFFFF;
+}
+
+
+/* Header and Navbar */
+
+
+.brand-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.webLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.brand-image{
+    height: 4rem;
+    width: 4rem;
+    background: white;
+    border-radius: 50%;
+}
+
+.container{
+    width: 100%;
+    padding: 2rem;
+}
+.container-fluid{
+    width: 100vw;
+    padding: 0rem;
+}
+.navbar,.footer{
+    background: var(--nav-color);
+    padding: 2rem 0;
+}
+.header,.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer > *, .header > *{
+    margin: 0.125rem;
+}
+.logo {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.search{
+    display: flex;
+}
+.search, .search > *{
+    background: var(--search-color);
+    color: #FFFFFF;
+    border: none;
+}
+.search-bar{
+    outline: none;
+    cursor: pointer;
+    width: 95%;
+}
+.search-bar:focus{
+    outline: none;
+    cursor: pointer;
+}
+.search{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.search-btn{
+    all: unset;
+    background: var(--search-color);
+    cursor: pointer;
+}
+
+/* Sidebar */
+
+
+
+/* Main Section */
+
+.breeds-cards{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card{
+    background: var(--card-bg-color);
+    border-radius: 2rem;
+    width: 100%;
+    
+}
+
+.dog-image{
+    width: 100%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.dog-details{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+.strong{
+    font-weight: 900;
+}
+.dog-name{
+    font-size: 1.5rem;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.main {
+  width: 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebar{
+    display: none;
+}
+

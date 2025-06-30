@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarkBoard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+    <link rel="stylesheet" href="./stylesheets/sidebar-style.css" />
+    <link rel="stylesheet" href="./stylesheets/responsive-queries.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar">
+        <header class="header">
+          <div class="brand-logo">
+            <span class="webLogo"
+              ><img
+                src="./assets/images/brand-image.png"
+                alt=""
+                class="brand-image"
+            /></span>
+            <h1 class="logo">BarkBoard</h1>
+          </div>
+          <form class="search" onsubmit="return false;">
+            <input
+              type="text"
+              id="search-bar"
+              class="search-bar"
+              placeholder="Search Temperament"
+            />
+            <button class="search-btn" id="search-btn" type="submit" onclick="search()">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </header>
+      </nav>
+    </div>
+    <div class="container flex">
+      <button class="sidebarToggle" id="sidebarToggle">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <aside class="sidebar">
+        <section class="temperament-section">
+          <h2 class="search-category">Temperament</h2>
+          <ul>
+            <li class="row" onclick="search_Temperament()" data-type="friendly">
+              <span class="temperament-icon"
+                ><img
+                  class="temperament-image"
+                  src="./assets/icons/dogs-icons/friendly.png"
+                  alt=""
+              /></span>
+              <p class="temperament-text">Friendly</p>
+            </li>
+            <li class="row" onclick="search_Temperament()" data-type="stubborn">
+              <span class="temperament-icon"
+                ><img
+                  class="temperament-image"
+                  src="./assets/icons/dogs-icons/stubborn-1.png"
+                  alt=""
+              /></span>
+              <p class="temperament-text">Stubborn</p>
+            </li>
+            <li class="row" onclick="search_Temperament()" data-type="protective">
+              <span class="temperament-icon"
+                ><img
+                  src="./assets/icons/dogs-icons/protective.png"
+                  alt=""
+                  class="temperament-image"
+              /></span>
+              <p class="temperament-text">Protective</p>
+            </li>
+            <li class="row" onclick="search_Temperament()" data-type="sociable">
+              <span class="temperament-icon"
+                ><img
+                  src="./assets/icons/dogs-icons/sociable.png"
+                  alt=""
+                  class="temperament-image"
+              /></span>
+              <p class="temperament-text">Sociable</p>
+            </li>
+            <li class="row" onclick="search_Temperament()" data-type="intelligent">
+              <span class="temperament-icon"
+                ><img
+                  src="./assets/icons/dogs-icons/intelligent.png"
+                  alt=""
+                  class="temperament-image"
+              /></span>
+              <p class="temperament-text">Intelligent</p>
+            </li>
+          </ul>
+        </section>
+        <hr class="separator" />
+        <section class="bred-for-section">
+          <h2 class="search-category">Bred for</h2>
+          <ul>
+            <li class="row" onclick="search_bred_for()" data-type="guard">
+              <span class="bred-for-icon"
+                ><img
+                  src="./assets/icons/dogs-icons/guard.png"
+                  alt=""
+                  class="bred-for-image"
+              /></span>
+              <p class="bred-for-text">Guard</p>
+            </li>
+            <li class="row" onclick="search_bred_for()" data-type="hunt">
+              <span class="bred-for-icon"
+                ><img
+                  src="./assets/icons/dogs-icons/hunt.png"
+                  alt=""
+                  class="bred-for-image"
+              /></span>
+              <p class="bred-for-text">Hunt</p>
+            </li>
+            <li class="row" onclick="search_bred_for()" data-type="companion">
+              <span class="bred-for-icon"
+                ><img
+                  src="./assets/icons/dogs-icons/companion.png"
+                  alt=""
+                  class="bred-for-image"
+              /></span>
+              <p class="bred-for-text">Companion</p>
+            </li>
+            <li class="row" onclick="search_Temperament()" data-type="fox">
+              <span class="bred-for-icon"
+                ><img
+                  src="./assets/icons/dogs-icons/fox.png"
+                  alt=""
+                  class="bred-for-image"
+              /></span>
+              <p class="bred-for-text">Fox Bolting</p>
+            </li>
+          </ul>
+        </section>
+        <hr class="separator" />
+        <section class="mode">
+          <label class="switch">
+            <input type="checkbox" id="theme-mode" checked />
+            <span class="slider"></span>
+          </label>
+
+          <span class="mode-type" id="mode-type">Night Mode</span>
+        </section>
+      </aside>
+      <section class="main">
+        <!-- static card -->
+        <div class="breeds-cards" id="breeds-cards">
+          <!-- <div class="card">
+            <div class="dog-image-box">
+              <img
+                src="https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg"
+                alt=""
+                class="dog-image"
+              />
+            </div>
+            <div class="dog-details">
+              <h3 class="dog-name">Affenpinscher</h3>
+              <ul>
+                <li class="dog-property">
+                  Weigth: <span class="strong">6 - 13 lb, 23 - 29 kg</span>
+                </li>
+                <li class="dog-property">
+                  Height:
+                  <span class="strong"
+                    >9 - 11.5 inches, 23 - 29 centimeters</span
+                  >
+                </li>
+                <li class="dog-property">
+                  Bred For:
+                  <span class="strong">Small rodent hunting, lapdog</span>
+                </li>
+                <li class="dog-property">
+                  Breed Group: <span class="strong">Toy</span>
+                </li>
+                <li class="dog-property">
+                  Life span: <span class="strong">10 - 12 years</span>
+                </li>
+                <li class="dog-property">
+                  Temperament:
+                  <span class="strong"
+                    >Stubborn, Curious, Playful, Adventurous, Active,
+                    Fun-loving</span
+                  >
+                </li>
+                <li class="dog-property">
+                  Origin: <span class="strong">Germany, France</span>
+                </li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </div>
+    <div class="container-fluid">
+      <footer class="footer">
+        <p class="copyright-text">Copyright by</p>
+        <h1 class="logo">BarkBoard</h1>
+      </footer>
+    </div>
+
+    <script src="./js/logical-functionalities.js"></script>
+    <script src="./js/data-fetching.js"></script>
+  </body>
+</html>
